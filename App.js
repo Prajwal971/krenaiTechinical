@@ -15,24 +15,28 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
+        {/* Top Header with FLEX defined as ROW */}
         <View style={styles.navgator}>
+          {/* Clickable Back arrow */}
           <TouchableOpacity>
             <Icon name="arrow-back" />
           </TouchableOpacity>
 
           <Text style={styles.title}>Sweaters</Text>
-
+          {/* Cart Icon  */}
           <TouchableOpacity>
             <Icon name="cart" />
           </TouchableOpacity>
         </View>
 
         <View>
+          {/* Deatiled Image  */}
           <Image
             resizeMode="cover"
             style={styles.cover}
             source={require("./assets/TopImage.png")}
           />
+          {/* OverLapping Favourite Button  */}
           <View style={styles.heartButton}>
             <TouchableOpacity>
               <Icon style={styles.close} name="heart" size={25} />
@@ -41,7 +45,9 @@ export default function App() {
         </View>
 
         <View style={styles.imgContainer}>
+          {/* Image container with Flex as ROW */}
           <View style={styles.image1}>
+            {/* Image styled with Round */}
             <TouchableOpacity>
               <Image
                 source={require("./assets/TopImage.png")}
@@ -68,6 +74,7 @@ export default function App() {
         </View>
 
         <View style={styles.descriptionContainer}>
+          {/* Discription of the images */}
           <Text style={styles.title1}>stand collar bishop Sleeve Sweater</Text>
           <Text style={styles.title23}>
             Loren ipsum dolor sit arnet, consectetur
@@ -78,6 +85,7 @@ export default function App() {
         </View>
 
         <View style={styles.navgator}>
+          {/* Icons inside circular VIEW */}
           <View style={styles.delivery}>
             <Icon name="car" color="#030fff" />
           </View>
@@ -103,16 +111,18 @@ export default function App() {
         </View>
 
         <View style={styles.navgator}>
+          {/* Star rating with Number of stars */}
           <View style={styles.row}>
             <Icon name="star" />
             <Icon name="star" />
             <Icon name="star" />
             <Icon name="star" />
             <Icon name="star" />
-            <Text style={styles.title}>   5</Text>
+            <Text style={styles.title}> 5</Text>
           </View>
 
           <View style={styles.image1}>
+            {/* Reviews images */}
             <TouchableOpacity>
               <Image
                 source={require("./assets/TopImage.png")}
@@ -137,10 +147,12 @@ export default function App() {
             </TouchableOpacity>
           </View>
         </View>
+
+        {/* Size Chart */}
         <View style={styles.navgator}>
           <Text style={styles.title}>Size</Text>
         </View>
-
+        {/* Sizes within View Encircled */}
         <View style={styles.navgator}>
           <View style={styles.delivery}>
             <TouchableOpacity>
@@ -214,6 +226,7 @@ export default function App() {
             </View>
           </TouchableOpacity>
         </View>
+        {/* Later on products */}
         <View style={styles.navgator}>
           <Text style={styles.title}>You may also like</Text>
         </View>
@@ -348,6 +361,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  // Initial container
   container: {
     flex: 1,
     backgroundColor: "#ebebf2",
@@ -380,6 +394,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 20,
   },
+  // Basic Column Flex
   col: {
     flex: 1,
     flexDirection: "column",
@@ -425,6 +440,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 50 / 2,
   },
+  //Image encircled
   img: {
     width: 50,
     height: 50,
